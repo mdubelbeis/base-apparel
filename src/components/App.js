@@ -10,6 +10,7 @@ function App() {
       <header>
         <img src={Logo} alt="" />
       </header>
+
       <main>
         <div>
           <img src={imgSmall} alt="" />
@@ -21,6 +22,10 @@ function App() {
           <Input />
         </section>
       </main>
+      <footer>
+        <small>Designed by Frontend Mentor</small>
+        <small>Coded by Mason J. Dubelbeis</small>
+      </footer>
     </div>
   );
 }
