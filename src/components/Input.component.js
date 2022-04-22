@@ -1,19 +1,50 @@
+import { useState, useEffect } from 'react';
+
 import arrow from '../images/icon-arrow.svg';
+import errorIcon from '../images/icon-error.svg';
 
 const Input = () => {
+  const [input, setInput] = useState('');
+  const [error, setError] = useState('');
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    setInput('');
+
+    if (!input.includes('@')) {
+      setError('Please provide a valid email');
+    } else {
+      setError('');
+    }
+  };
+
   return (
-    <form className="relative">
-      <label>
-        <input
-          className="border-2 border-desat-red opacity-50 pl-4 w-full py-2 rounded-full placeholder-desat-red"
-          type="text"
-          placeholder="Email Address"
-        />
-      </label>
-      <button className="absolute shadow-xl shadow-desat-red block right-[1px] bottom-[1px] px-[25px] py-[11px] rounded-full bg-gradient-to-br from-desat-pink to-soft-pink">
-        <img src={arrow} alt="arrow icon" />
-      </button>
-    </form>
+    <>
+      <form className="relative" onSubmit={(e) => onFormSubmit(e)}>
+        <label>
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="border-2 border-desat-red opacity-50 pl-4 w-full py-2 rounded-full placeholder-desat-red"
+            type="text"
+            placeholder="Email Address"
+          />
+        </label>
+        <button className="absolute shadow-xl shadow-desat-red block right-[1px] bottom-[1px] px-[25px] py-[11px] rounded-full bg-gradient-to-br from-desat-pink to-soft-pink">
+          <img src={arrow} alt="arrow icon" />
+        </button>
+        {error && (
+          <span className="absolute left-4 -bottom-6 text-sm text-soft-red">
+            {error}
+          </span>
+        )}
+        {error && (
+          <div className="absolute right-16 mr-2 bottom-[10px] ">
+            <img src={errorIcon} alt="Error icon" />
+          </div>
+        )}
+      </form>
+    </>
   );
 };
 
