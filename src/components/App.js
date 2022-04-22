@@ -7,22 +7,20 @@ import Input from './Input.component';
 function App() {
   return (
     <div className="font-josefin-sans text-base">
-      <header>
-        <img src={Logo} alt="" />
+      <header className="p-8">
+        <img className="w-32" src={Logo} alt="" />
       </header>
 
       <main>
         <div>
-          <img src={imgSmall} alt="" />
+          <img className="w-full" src={imgSmall} alt="" />
         </div>
-        <section>
+        <section className="mt-16 text-center p-8">
           <Info />
         </section>
-        <section>
-          <Input />
-        </section>
       </main>
-      <footer>
+
+      <footer className="absolute bottom-0 left-0 p-4 flex flex-col w-full items-center bg-desat-pink">
         <small>Designed by Frontend Mentor</small>
         <small>Coded by Mason J. Dubelbeis</small>
       </footer>

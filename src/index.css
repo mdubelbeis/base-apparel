@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* body {
+  @apply bg-gradient-to-br from-pure-white via-light-pink to-desat-pink;
+} */
