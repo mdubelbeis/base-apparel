@@ -6,14 +6,18 @@ import Input from './Input.component';
 
 function App() {
   return (
-    <div className="font-josefin-sans text-base">
+    <div className="font-josefin-sans text-base max-w-lg mx-auto">
       <header className="p-8">
         <img className="w-24" src={Logo} alt="" />
       </header>
 
-      <main>
-        <div>
-          <img className="w-full" src={imgSmall} alt="" />
+      <main className="flex flex-col items-center md:mb-32">
+        <div className="w-full">
+          <img
+            className="w-full"
+            src={imgSmall}
+            alt="girl modeling"
+          />
         </div>
         <section className="mt-16 text-center p-8">
           <Info />
