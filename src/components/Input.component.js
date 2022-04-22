@@ -16,7 +16,7 @@ const Input = () => {
       setError('Please provide a valid email');
       setAccess(false);
     } else {
-      setError('Access Granted');
+      setError('Accepted');
       setAccess(true);
     }
   };
