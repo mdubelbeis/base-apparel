@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="font-josefin-sans text-base">
       <header className="p-8">
-        <img className="w-32" src={Logo} alt="" />
+        <img className="w-24" src={Logo} alt="" />
       </header>
 
       <main>
