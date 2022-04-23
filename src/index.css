@@ -11,3 +11,8 @@
 html {
   height: 100vh;
 }
+
+body {
+  background: url('../src/images/bg-pattern-desktop.svg') no-repeat
+    center/cover;
+}
