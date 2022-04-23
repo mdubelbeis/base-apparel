@@ -1,24 +1,27 @@
 import Logo from '../images/logo.svg';
 
 import Info from './Info.component';
-import Input from './Input.component';
 import Image from './Image.component';
 
 function App() {
   return (
-    <div className="min-h-screen md:relative font-josefin-sans text-base mx-auto">
-      <header className="p-8 md:absolute md:hidden lg:block lg:top-20 xl:left-64 lg:w-26">
-        <img className="w-24 lg:w-48" src={Logo} alt="" />
-      </header>
-      <main className="flex flex-col items-center md:mb-32 lg:flex-row-reverse ">
-        <Image />
-        <Info />
-      </main>
+    <div>
+      <div className="font-josefin-sans text-base mx-auto lg:mx-12 max-w-xl">
+        <div class="container flex flex-col lg:space-y-20 max-w-[600px] lg:pl-20 xl:pl-32">
+          <header className="p-8 lg:p-0 lg:mt-36">
+            <img className="w-24 lg:w-48" src={Logo} alt="" />
+          </header>
+          <main className="flex flex-col space-y-10 lg:space-y-0 lg:flex-row lg:items-center">
+            <Image />
+            <Info />
+          </main>
+        </div>
 
-      <footer className="absolute bottom-0 left-0 p-2 flex flex-col w-screen items-center bg-desat-pink">
-        <small>Designed by Frontend Mentor</small>
-        <small>Coded by Mason J. Dubelbeis</small>
-      </footer>
+        {/* <footer className="absolute bottom-0 left-0 p-2 flex flex-col w-screen items-center bg-desat-pink">
+          <small>Designed by Frontend Mentor</small>
+          <small>Coded by Mason J. Dubelbeis</small>
+        </footer> */}
+      </div>
     </div>
   );
 }
