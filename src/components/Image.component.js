@@ -29,7 +29,7 @@ const Image = () => {
       )}
       {windowSize >= 1024 && (
         <img
-          className="w-full md:min-h-full"
+          className="w-full min-h-full"
           src={imgLarge}
           alt="girl modeling"
         />
