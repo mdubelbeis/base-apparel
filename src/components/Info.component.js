@@ -14,9 +14,9 @@ const Info = () => {
         fashion store. Add your email below to stay up-to-date with
         announcements and our launch deals.
       </p>
-      <section>
+      <div>
         <Input />
-      </section>
+      </div>
     </section>
   );
 };
