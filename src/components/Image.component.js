@@ -19,7 +19,7 @@ const Image = () => {
   });
 
   return (
-    <section className="w-screen lg:max-w-3xl lg:h-screen">
+    <div className="w-screen lg:w-[700px] lg:h-screen">
       {windowSize < 1024 && (
         <img
           className="w-full lg:h-full lg:object-cover"
@@ -29,12 +29,12 @@ const Image = () => {
       )}
       {windowSize >= 1024 && (
         <img
-          className="w-full object-fit h-full"
+          className="w-full md:min-h-full"
           src={imgLarge}
           alt="girl modeling"
         />
       )}
-    </section>
+    </div>
   );
 };
 

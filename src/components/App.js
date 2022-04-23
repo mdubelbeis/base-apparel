@@ -6,8 +6,8 @@ import Image from './Image.component';
 
 function App() {
   return (
-    <div className="min-h-screen font-josefin-sans text-base max-w-lg mx-auto lg:min-w-full">
-      <header className="p-8 lg:absolute top-2 left-2">
+    <div className="min-h-screen md:relative font-josefin-sans text-base mx-auto">
+      <header className="p-8 md:absolute md:hidden lg:block lg:top-20 xl:left-64 lg:w-26">
         <img className="w-24 lg:w-48" src={Logo} alt="" />
       </header>
       <main className="flex flex-col items-center md:mb-32 lg:flex-row-reverse ">
