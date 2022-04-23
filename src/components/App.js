@@ -6,12 +6,12 @@ import Image from './Image.component';
 function App() {
   return (
     <div>
-      <div className="font-josefin-sans text-base mx-auto lg:mx-12 max-w-xl">
-        <div class="container flex flex-col lg:space-y-20 max-w-[600px] lg:pl-20 lg:pt-10 xl:pl-64 xl:pt-10">
+      <div className="font-josefin-sans text-base mx-auto lg:mx-0 max-w-2xl">
+        <div class="container flex flex-col lg:space-y-20 lg:ml-40 xl:ml-60 2xl:ml-80">
           <header className="p-8 lg:p-0 lg:mt-36">
             <img className="w-24 lg:w-48" src={Logo} alt="" />
           </header>
-          <main className="flex flex-col space-y-10 lg:space-y-0 lg:flex-row lg:items-center">
+          <main className="flex flex-col space-y-10 md:space-y-2 lg:space-y-0 lg:flex-row lg:w-full">
             <Image />
             <Info />
           </main>

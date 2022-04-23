@@ -19,17 +19,17 @@ const Image = () => {
   });
 
   return (
-    <div className="w-screen sm:flex sm:content-center max-w-xl lg:absolute lg:h-screen lg:top-0 lg:right-0 lg:w-[400px] xl:w-[600px]">
+    <div className="w-screen max-w-lg lg:absolute lg:h-screen lg:top-0 lg:right-0 lg:w-[400px] xl:w-[600px]">
       {windowSize < 1024 && (
         <img
-          className="mx-auto w-full"
+          className="mx-auto w-full rounded-md"
           src={imgSmall}
           alt="girl modeling"
         />
       )}
       {windowSize >= 1024 && (
         <img
-          className="object-center object-cover min-h-full"
+          className="object-center object-cover min-h-full rounded-md"
           src={imgLarge}
           alt="girl modeling"
         />

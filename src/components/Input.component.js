@@ -22,7 +22,7 @@ const Input = () => {
   };
 
   return (
-    <>
+    <div className="w-full">
       <form className="relative" onSubmit={(e) => onFormSubmit(e)}>
         <label>
           <input
@@ -55,7 +55,7 @@ const Input = () => {
           </div>
         )}
       </form>
-    </>
+    </div>
   );
 };
 
