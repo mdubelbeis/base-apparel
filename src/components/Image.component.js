@@ -14,9 +14,12 @@ const Image = () => {
     window.addEventListener('resize', () =>
       setWindowSize(window.innerWidth)
     );
-
     console.log(windowSize);
-  });
+
+    return () => {
+      setWindowSize(0);
+    };
+  }, [windowSize]);
 
   return (
     <div className="w-screen max-w-lg lg:absolute lg:h-screen lg:top-0 lg:right-0 lg:w-[400px] xl:w-[600px]">
