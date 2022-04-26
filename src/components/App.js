@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <div className="font-josefin-sans text-base mx-auto lg:mx-0 max-w-2xl">
-        <div class="container flex flex-col lg:space-y-20 lg:ml-40 xl:ml-60 2xl:ml-80">
+        <div className="container flex flex-col lg:space-y-20 lg:ml-40 xl:ml-60 2xl:ml-80">
           <header className="p-8 lg:p-0 lg:mt-32">
             <img className="w-24 lg:w-48" src={Logo} alt="" />
           </header>
