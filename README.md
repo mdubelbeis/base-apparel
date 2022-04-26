@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/baseapparel-BJF2t5ZB9](https://your-solution-url.com)
-- Live Site URL: [https://base-apparel-sigma-eight.vercel.app/](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/baseapparel-BJF2t5ZB9](https://www.frontendmentor.io/solutions/baseapparel-BJF2t5ZB9)
+- Live Site URL: [https://base-apparel-qxcsv510c-mdubelbeis.vercel.app/](https://base-apparel-qxcsv510c-mdubelbeis.vercel.app/)
 
 ## My process
 
