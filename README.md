@@ -8,7 +8,6 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
@@ -16,7 +15,6 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -32,87 +30,67 @@ Users should be able to:
   - The `input` field is empty
   - The email address is not formatted correctly
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/baseapparel-BJF2t5ZB9](https://your-solution-url.com)
+- Live Site URL: [https://base-apparel-sigma-eight.vercel.app/](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [React](https://reactjs.org/)
+- [TailwindCSS](https://https://tailwindcss.com/)
+- [Vercel](https://vercel.com)
 
 ### What I learned
 
+I learned alot with this challenge. I fought many little battles with TailwindCSS. As I am getting more used to implementation in React, the main focus with this challenge was to try my best to implement the best approach to styling with Tailwind. The implementation is fast and nice but getting my head around the utilities applied to components can be overwhelming. I understand Tailwind and will continue using Tailwind for projects but I will be making my attempts and Styled Components for the next few challenges to learn and eventually have a handfull of tools to styling my web applications with.
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+With Tailwind, I will be continuing my focus on styling React and non-React applictions. I do love the simplicity and functionality of Tailwind but need to overcome some of the complexities and overwhelming clutter.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+With responsive images, I could not get srcSet to work again. It wasn't providing me with the result I was after so I implemented my own method to render images on the webpage with a the resize event listener which would call setWindowSize, then using that state to render the proper img on the page.
+
+```js
+const [windowSize, setWindowSize] = useState(0);
+
+useEffect(() => {
+  setWindowSize(window.innerWidth);
+
+  window.addEventListener('resize', () =>
+    setWindowSize(window.innerWidth)
+  );
+
+  return () => {
+    setWindowSize(0);
+  };
+}, [windowSize]);
+
+<div>
+  {windowSize < 1024 && <img src={imgSmall} alt="girl modeling" />}
+  {windowSize >= 1024 && <img src={imgLarge} alt="girl modeling" />}
+</div>;
+```
+
+I will need to continue understanding the proper implementation of the cleanup function for useEffect and find a working solution to get srcSet to work but my solution is not to implement until then.
+
+I also want to continue finding better practices and solutions to using Tailwind for styling in React. I will take my approach much slower and ensure proper structure in React before adding styling. My weakness here is the eargerness to put styling into the application before I am sure my structure is 100%.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [https://tailwindcss.com/](https://www.tailwindcss.com) - The documentation for TailwindCSS continues to help when I forgot syntax or when I want to learn a new approach to a issue in styling.
+- [https://vercel.com/docs](https://www.vercel.com/docs) - Reference for using and launching to Vercel.
+- [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html) - Still helps when trying to understand how something should be in React.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Mason J. Dubelbeis](Coming Soon!)
+- Frontend Mentor - [@mdubelbeis](https://www.frontendmentor.io/profile/mdubelbeis)
+- Twitter - [@mason_dubelbeis](https://twitter.com/mason_dubelbeis)
