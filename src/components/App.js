@@ -17,10 +17,10 @@ function App() {
           </main>
         </div>
 
-        {/* <footer className="absolute bottom-0 left-0 p-2 flex flex-col w-screen items-center bg-desat-pink">
+        <footer className="fixed bottom-0 left-0 p-2 flex flex-col w-screen items-center bg-desat-pink">
           <small>Designed by Frontend Mentor</small>
           <small>Coded by Mason J. Dubelbeis</small>
-        </footer> */}
+        </footer>
       </div>
     </div>
   );
